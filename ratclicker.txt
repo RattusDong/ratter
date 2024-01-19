@@ -22,7 +22,6 @@ Buttons
 		desc:Click this rat to get more rats!
 		on click:anim icon wobble
 		on click:yield 1 bunny
-		on click:if (have goldenTouch and chance(1%)) yield 1 goldenCarrot
 		icon:https://github.com/RattusDong/ratter/blob/main/rat_mouse_PNG23553.png?raw=true
 		no text
 		class:bigButton hasFlares
