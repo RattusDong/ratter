@@ -70,7 +70,7 @@ Achievements
 		on click:anim glow
 		
 	*ratAchiev1
-		name:Run rabbit run
-		desc:Have <b>1</b> bunny.
-		req:1 rat
+		name:rat segs
+		desc:Have <b>2</b> rat.
+		req:2 rat
 		icon:icons[2,4] icons[0,2] icons[0,6]
