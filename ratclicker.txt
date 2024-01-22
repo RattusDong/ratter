@@ -10,7 +10,7 @@ Settings
 	background:stuff/meadow.jpg
 	building cost increase:115%
 	building cost refund:50%
-	spritesheet:icons, 48 by 48, stuff/bunnyIcons.png
+	spritesheet:icons, 64 by 64, https://github.com/RattusDong/ratter/blob/main/ratctile2.png?raw=true
 	stylesheet:stuff/bigBlue.css
 
 Layout
@@ -22,7 +22,7 @@ Buttons
 		desc:Click this rat to get more rats!
 		on click:anim icon wobble
 		on click:yield 1 rat
-		icon:https://github.com/RattusDong/ratter/blob/main/rat_mouse_PNG23553.png?raw=true
+		icon:https://github.com/RattusDong/ratter/blob/main/bigrat.png?raw=true
 		no text
 		class:bigButton hasFlares
 		icon class:shadowed
@@ -33,7 +33,7 @@ Resources
 	*rat|rats
 		name:Rat|Rats
 		desc:ree
-		icon:icons[0,0]
+		icon:icons[0,1]
 		class:noBackground
 		show earned
 		
@@ -47,30 +47,38 @@ Buildings
 		
 	*lesser|lessers
 		name:Lesser|Lessers
-		desc:A tiny little thing.<//><b>Effect:</b><.>Produces 1 rabbit every 10 seconds.
-		icon:icons[3,0]
+		desc:A tiny little thing. pathetic.<//><b>Effect:</b><.>Produces 1 rat every 10 seconds.
+		icon:icons[0,3]
 		cost:15 rats
 		on tick:yield 0.1 rat
+		unlocked
+
+	*biggler|bigglers
+		name:Biggler|Bigglers
+		desc:A large creature, not to be underestimated.<//><b>Effect:</b><.>Produces 1 rat every second.
+		icon:icons[0,4]
+		cost:100 rats
+		on tick:yield 1 rat
 		unlocked
 		
 Upgrades
 	*TEMPLATE
 		on click:anim glow
 	
-	*dong
-		name:dong
-		desc:funny.<//><b>Effect:</b><.>+1 rat/click
-		icon:icons[1,1]
+	*cheese
+		name:cheese.png
+		desc:intangible.<//><b>Effect:</b><.>+1 rat/click
+		icon:icons[0,2]
 		cost:100 rats
 		passive:increase rat yield of ratButton by 1
-		req:10 rats:earned
+		req:5 lessers
 		
 Achievements
 	*TEMPLATE
 		on click:anim glow
 		
 	*ratAchiev1
-		name:rat segs
-		desc:Have <b>2</b> rat.
-		req:2 rat
-		icon:icons[2,4] icons[0,2] icons[0,6]
+		name:rat segs!
+		desc:Have <b>2</b> lessers.
+		req:2 lessers
+		icon:icons[0,0]
